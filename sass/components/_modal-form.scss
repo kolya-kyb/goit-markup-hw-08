@@ -76,7 +76,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.03em;
 }
@@ -122,11 +122,16 @@
 
   color: var(--primary-text-color-theme-dark);
   cursor: pointer;
-  
+
   &:hover,
   &:focus {
     background: var(--color-button-accent);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form-check-desc {
+    font-size: 14px;
   }
 }
