@@ -58,3 +58,8 @@
     border-radius: 4px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .footer-form {
+    flex-direction: column;
+  }
+}
