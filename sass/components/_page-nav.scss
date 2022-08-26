@@ -178,8 +178,10 @@
   .contacts-list__link {
     font-size: 14px;
   }
+  .contacts-list {
+    display: flex;
+  }
+  .contacts-list__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
-
-// .contacts-list__item:not(:last-child) {
-//   margin-right: 50px;
-// }
