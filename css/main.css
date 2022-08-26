@@ -80,11 +80,18 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--color-section);
 }
 
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: var(--color-section);
+  }
+}
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -178,6 +185,15 @@ body {
     font-size: 44px;
   }
 }
+.title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -417,20 +433,44 @@ body {
     margin-right: 50px;
   }
 }
-.features-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+@media screen and (max-width: 1199px) {
+  .work.section {
+    display: none;
+  }
 }
-
-.flex-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+@media screen and (min-width: 1200px) {
+  .work {
+    padding-top: 0px;
+  }
+  .row-work {
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 70px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-text-color-theme-dark);
+    background: rgba(47, 48, 58, 0.8);
+  }
+  .work-item {
+    position: relative;
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
-
-.features-list__item {
-  flex-basis: calc((100% - 90px) / 4);
+.features-list__icon {
+  margin-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: var(--color-feature);
 }
 
 .features-list__subtitle {
@@ -442,18 +482,29 @@ body {
   text-transform: uppercase;
 }
 
-.features-list__icon {
-  margin-bottom: 30px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-right: 100px;
-  padding-left: 100px;
-  border-radius: 4px;
-  background-color: var(--color-feature);
-}
-
 .features-list__text {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 767px) {
+  .features-list__subtitle {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .flex-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .features-list__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-list__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }/*# sourceMappingURL=main.css.map */
