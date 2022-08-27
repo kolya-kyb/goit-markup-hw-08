@@ -2,10 +2,9 @@
   display: flex;
   margin-bottom: 50px;
   flex-wrap: wrap;
+  gap: 10px;
 }
-.button-item:not(:last-child) {
-  margin-right: 8px;
-}
+
 .filter-btn {
   padding-top: 6px;
   padding-bottom: 6px;

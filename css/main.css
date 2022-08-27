@@ -207,9 +207,10 @@ body {
 .hero {
   text-align: center;
   max-width: 480px;
-  max-height: 400px;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg/header-img-mobile.jpg");
   background-size: cover;
   background-color: var(--color-hero);
@@ -235,7 +236,8 @@ body {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg/img-desktop.jpg");
     max-width: 1600px;
-    max-height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
@@ -270,7 +272,6 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    max-height: 796px;
     z-index: 1000;
     top: 0;
     left: 0;
@@ -280,6 +281,9 @@ body {
     pointer-events: none;
     transition: opacity var(--transition-duration-and-func), visibility var(--transition-duration-and-func);
   }
+  .contacts-list-mobile__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
   .mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
@@ -288,6 +292,7 @@ body {
   .mobile-menu__container {
     position: relative;
     padding: 48px 40px;
+    height: 100%;
   }
   .mobile-menu__close-btn {
     position: absolute;
@@ -311,18 +316,18 @@ body {
   .menu__item:not(:last-child) {
     margin-bottom: 32px;
   }
-  .mobile-menu__list {
-    margin-bottom: 302px;
+  .contacts-list-mobile-wrap {
+    position: absolute;
+    bottom: 48px;
   }
   .contacts-list-mobile {
     margin-bottom: 64px;
   }
   .contacts-list-mobile__phone {
     display: block;
-    margin-bottom: 32px;
     font-weight: 500;
     font-size: 34px;
-    line-height: 1.76px;
+    line-height: 1.76;
     letter-spacing: 0.02em;
     color: var(--accent-color);
   }
@@ -497,6 +502,9 @@ body {
   .features-list__subtitle {
     text-align: center;
   }
+  .features-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .flex-list {
@@ -591,7 +599,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 100%;
   height: 92px;
   border-radius: 4px;
   border: 1px solid var(--color-border-client-list);
@@ -709,7 +717,7 @@ body {
 
 .footer-contact-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -830,10 +838,7 @@ body {
   display: flex;
   margin-bottom: 50px;
   flex-wrap: wrap;
-}
-
-.button-item:not(:last-child) {
-  margin-right: 8px;
+  gap: 10px;
 }
 
 .filter-btn {
